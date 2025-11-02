@@ -3,18 +3,24 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "wrangler pages dev public --port 8787",
     "deploy": "wrangler pages deploy public",
+    "dev": "wrangler pages dev public --port 8787",
+    "start": "bun run alchemy.run.ts",
+    "typecheck": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "alchemy": "^0.77.0",
     "hono": "^4.10.4"
   },
   "devDependencies": {
-    "wrangler": "^4.45.3"
+    "@cloudflare/workers-types": "4.20251014.0",
+    "@types/bun": "latest",
+    "typescript": "^5.9.3"
   },
-  "description": "FinLite - Smart Budget & Spending Tracker Website"
+  "description": "FinLite - Smart Budget & Spending Tracker Website",
+  "private": true
 }

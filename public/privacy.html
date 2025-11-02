@@ -97,7 +97,7 @@
 </head>
 <body class="bg-base-100 text-base-content">
     <!-- Navigation -->
-    <div class="navbar bg-base-100/95 backdrop-blur-xl border-b border-base-300/50 sticky top-0 z-50 max-w-2xl mx-auto px-4">
+    <div class="navbar bg-base-100/95 backdrop-blur-xl border-b border-base-300/50 sticky top-0 z-50 shadow-sm max-w-2xl mx-auto px-4">
         <div class="navbar-start">
             <a href="/" class="text-xl font-bold text-primary hover:text-primary-focus transition-colors duration-300">FinLite</a>
         </div>
@@ -458,19 +458,25 @@
     </footer>
 
     <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const html = document.documentElement;
-        
+        // Initialize theme immediately to prevent flash
         const currentTheme = localStorage.getItem('theme') || 'light';
-        html.setAttribute('data-theme', currentTheme);
-        if (currentTheme === 'dark') {
-            themeToggle.checked = true;
-        }
+        document.documentElement.setAttribute('data-theme', currentTheme);
         
-        themeToggle.addEventListener('change', () => {
-            const theme = themeToggle.checked ? 'dark' : 'light';
-            html.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
+        // Theme switcher with smooth transition
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('themeToggle');
+            const html = document.documentElement;
+            
+            // Set checkbox state based on saved theme
+            if (currentTheme === 'dark') {
+                themeToggle.checked = true;
+            }
+            
+            themeToggle.addEventListener('change', () => {
+                const theme = themeToggle.checked ? 'dark' : 'light';
+                html.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+            });
         });
     </script>
 </body>

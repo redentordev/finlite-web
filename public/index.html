@@ -457,21 +457,25 @@
     </footer>
 
     <script>
-        // Theme switcher with smooth transition
-        const themeToggle = document.getElementById('themeToggle');
-        const html = document.documentElement;
-        
-        // Check for saved theme preference
+        // Initialize theme immediately to prevent flash
         const currentTheme = localStorage.getItem('theme') || 'light';
-        html.setAttribute('data-theme', currentTheme);
-        if (currentTheme === 'dark') {
-            themeToggle.checked = true;
-        }
+        document.documentElement.setAttribute('data-theme', currentTheme);
         
-        themeToggle.addEventListener('change', () => {
-            const theme = themeToggle.checked ? 'dark' : 'light';
-            html.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
+        // Theme switcher with smooth transition
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('themeToggle');
+            const html = document.documentElement;
+            
+            // Set checkbox state based on saved theme
+            if (currentTheme === 'dark') {
+                themeToggle.checked = true;
+            }
+            
+            themeToggle.addEventListener('change', () => {
+                const theme = themeToggle.checked ? 'dark' : 'light';
+                html.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+            });
         });
 
         // Smooth scroll with view transition

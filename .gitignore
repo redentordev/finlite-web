@@ -29,3 +29,9 @@ desktop.ini
 # Build
 dist/
 .cache/
+
+# sst
+.sst
+
+# Alchemy build outputs and deployment configs
+.alchemy/
