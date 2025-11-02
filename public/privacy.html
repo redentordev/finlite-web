@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - FinLite</title>
+    
+    <!-- Prefetch critical resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS + DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#007BFE',
+                            focus: '#0066D6',
+                            light: '#E6F3FF',
+                        },
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        /* View Transitions */
+        @view-transition {
+            navigation: auto;
+        }
+
+        ::view-transition-old(root) {
+            animation: fadeOut 0.3s ease-in-out;
+        }
+
+        ::view-transition-new(root) {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Professional hover effects */
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 123, 254, 0.1);
+        }
+
+        /* Smooth scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--fallback-b1,oklch(var(--b1)));
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--fallback-p,oklch(var(--p)));
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-base-100 text-base-content">
+    <!-- Navigation -->
+    <div class="navbar bg-base-100/95 backdrop-blur-xl border-b border-base-300/50 sticky top-0 z-50 max-w-2xl mx-auto px-4">
+        <div class="navbar-start">
+            <a href="/" class="text-xl font-bold text-primary hover:text-primary-focus transition-colors duration-300">FinLite</a>
+        </div>
+        <div class="navbar-center hidden md:flex">
+            <a href="/terms.html" class="text-sm text-base-content/70 hover:text-primary transition-colors duration-300 mx-2">Terms</a>
+            <a href="/privacy.html" class="text-sm text-base-content/70 hover:text-primary transition-colors duration-300 mx-2">Privacy</a>
+        </div>
+        <div class="navbar-end">
+            <label class="swap swap-rotate hover:scale-110 transition-transform duration-300">
+                <input type="checkbox" id="themeToggle" class="theme-controller" />
+                <svg class="swap-off fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,3.5,0,0,1,12,15.5Z"/>
+                </svg>
+                <svg class="swap-on fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/>
+                </svg>
+            </label>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container mx-auto px-4 py-16 max-w-2xl">
+        <div class="prose prose-lg max-w-none">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
+                <p class="text-base-content/60 text-lg">Last Updated: November 3, 2025 • Version 0.1</p>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Section 1 -->
+                <section class="card bg-base-200/30 backdrop-blur border border-base-300/20 p-8 card-hover">
+                    <h2 class="text-2xl font-semibold mb-6 text-primary">1. Introduction</h2>
+                    <div class="space-y-4 text-base-content/80 leading-relaxed">
+                        <p>
+                            FinLite ("we," "us," "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal and financial information when you use the FinLite mobile application ("App").
+                        </p>
+                        <p>
+                            By downloading and using the App, you acknowledge that you have read and understand this Policy.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Section 2 -->
+                <section class="card bg-base-200/30 backdrop-blur border border-base-300/20 p-8 card-hover">
+                    <h2 class="text-2xl font-semibold mb-6 text-primary">2. Information We Collect</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">2.1 Information You Provide</h3>
+                            
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="text-lg font-medium mb-2 text-base-content/80">Account Information</h4>
+                                    <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                        <li>Name and email address</li>
+                                        <li>Phone number (optional)</li>
+                                        <li>Password (hashed and encrypted)</li>
+                                        <li>Profile picture (optional)</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-lg font-medium mb-2 text-base-content/80">Financial Information</h4>
+                                    <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                        <li>Income and expense transactions</li>
+                                        <li>Budget amounts and limits</li>
+                                        <li>Financial goals and targets</li>
+                                        <li>Category preferences</li>
+                                        <li>Account balances</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-lg font-medium mb-2 text-base-content/80">Receipt Data</h4>
+                                    <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                        <li>Receipt images uploaded by you</li>
+                                        <li>OCR-extracted text from receipts</li>
+                                        <li>Transaction details from scanned documents</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">2.2 Information Collected Automatically</h3>
+                            
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="text-lg font-medium mb-2 text-base-content/80">Device Information</h4>
+                                    <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                        <li>Device model and operating system</li>
+                                        <li>Unique device identifier</li>
+                                        <li>Device language and region settings</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-lg font-medium mb-2 text-base-content/80">Usage Information</h4>
+                                    <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                        <li>Features accessed</li>
+                                        <li>Time and duration of use</li>
+                                        <li>App interactions and navigation patterns</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3 -->
+                <section class="card bg-base-200/30 backdrop-blur border border-base-300/20 p-8 card-hover">
+                    <h2 class="text-2xl font-semibold mb-6 text-primary">3. How We Use Your Information</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">3.1 Service Delivery</h3>
+                            <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                <li>Creating and maintaining your account</li>
+                                <li>Processing transactions and receipt scans</li>
+                                <li>Delivering App features and functionality</li>
+                                <li>Providing customer support</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">3.2 Improvement and Analytics</h3>
+                            <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                <li>Analyzing App usage patterns</li>
+                                <li>Identifying technical issues</li>
+                                <li>Improving App features and performance</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">3.3 Personalization</h3>
+                            <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                <li>Customizing your experience</li>
+                                <li>Delivering tailored nudges and reminders</li>
+                                <li>Providing personalized insights</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">3.4 Security and Compliance</h3>
+                            <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                <li>Detecting and preventing fraud</li>
+                                <li>Enforcing our Terms of Use</li>
+                                <li>Complying with legal obligations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4 -->
+                <section class="card bg-base-200/30 backdrop-blur border border-base-300/20 p-8 card-hover">
+                    <h2 class="text-2xl font-semibold mb-6 text-primary">4. How We Share Your Information</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">4.1 We Do NOT Share</h3>
+                            <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                <li>Your financial data with advertisers</li>
+                                <li>Your transactions with third-party marketers</li>
+                                <li>Your data with data brokers</li>
+                                <li>Your information for commercial purposes</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">4.2 Service Providers</h3>
+                            <p class="text-base-content/70 mb-3">We share data only with essential service providers:</p>
+                            <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                <li>Supabase: Database and cloud storage</li>
+                                <li>Google Cloud: Infrastructure services</li>
+                                <li>OpenAI: Receipt scanning and AI analysis</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">4.3 Legal Requirements</h3>
+                            <p class="text-base-content/70">
+                                We may disclose information when required by law or to protect our rights and safety.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 5 -->
+                <section class="card bg-base-200/30 backdrop-blur border border-base-300/20 p-8 card-hover">
+                    <h2 class="text-2xl font-semibold mb-6 text-primary">5. Data Storage and Retention</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">5.1 Where We Store Data</h3>
+                            <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                <li>Primary database: Supabase (cloud-hosted)</li>
+                                <li>File storage: Supabase Storage</li>
+                                <li>Backup location: Encrypted backup systems</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">5.2 Retention Periods</h3>
+                            <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                <li>Active Account Data: Retained while you use the App</li>
+                                <li>Deleted Transactions: Permanently deleted within 30 days</li>
+                                <li>Account Data After Deletion: Deleted within 90 days of termination</li>
+                                <li>Server Logs: Retained for 90 days</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 6 -->
+                <section class="card bg-base-200/30 backdrop-blur border border-base-300/20 p-8 card-hover">
+                    <h2 class="text-2xl font-semibold mb-6 text-primary">6. Data Security</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">6.1 Security Measures</h3>
+                            <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                <li>End-to-end encryption for sensitive data</li>
+                                <li>HTTPS/TLS for data in transit</li>
+                                <li>AES-256 encryption for data at rest</li>
+                                <li>Secure password hashing</li>
+                                <li>Regular security audits</li>
+                                <li>Two-factor authentication (optional)</li>
+                                <li>Session timeouts for inactive users</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">6.2 Your Responsibilities</h3>
+                            <ul class="list-disc list-inside space-y-1 text-base-content/70 ml-4">
+                                <li>Keep your password confidential</li>
+                                <li>Use strong, unique passwords</li>
+                                <li>Enable two-factor authentication</li>
+                                <li>Report unauthorized access immediately</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 7 -->
+                <section class="card bg-base-200/30 backdrop-blur border border-base-300/20 p-8 card-hover">
+                    <h2 class="text-2xl font-semibold mb-6 text-primary">7. Your Privacy Rights</h2>
+                    
+                    <div class="space-y-4 text-base-content/80">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-base-content/90">7.1 Access</h3>
+                            <p>You can request a copy of your personal data we hold.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-base-content/90">7.2 Rectification</h3>
+                            <p>You can correct inaccurate or incomplete information.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-base-content/90">7.3 Erasure</h3>
+                            <p>You can request deletion of your personal data, subject to legal obligations.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-base-content/90">7.4 Data Portability</h3>
+                            <p>You can receive your data in a portable format (CSV/JSON) and transfer it to another service.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-base-content/90">7.5 Object</h3>
+                            <p>You can opt-out of marketing communications and certain processing activities.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-base-content/90">7.6 Exercising Your Rights</h3>
+                            <p>To exercise any of these rights, contact us at: <strong>finlite@redentor.dev</strong></p>
+                            <p>We will respond to requests within 30 days.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 8 -->
+                <section class="card bg-base-200/30 backdrop-blur border border-base-300/20 p-8 card-hover">
+                    <h2 class="text-2xl font-semibold mb-6 text-primary">8. Children's Privacy</h2>
+                    <p class="text-base-content/80 leading-relaxed">
+                        FinLite is not intended for children under 13. We do not knowingly collect information from children under 13.
+                    </p>
+                    <p class="text-base-content/80 leading-relaxed">
+                        For users aged 13-18, parental consent is required and additional privacy protections apply.
+                    </p>
+                </section>
+
+                <!-- Section 9 -->
+                <section class="card bg-base-200/30 backdrop-blur border border-base-300/20 p-8 card-hover">
+                    <h2 class="text-2xl font-semibold mb-6 text-primary">9. Changes to This Policy</h2>
+                    <p class="text-base-content/80 leading-relaxed">
+                        We may update this Policy from time to time. Material changes will be posted in the App and sent to your registered email. Your continued use after changes constitutes acceptance of the updated Policy.
+                    </p>
+                </section>
+
+                <!-- Section 10 -->
+                <section class="card bg-base-200/30 backdrop-blur border border-base-300/20 p-8 card-hover">
+                    <h2 class="text-2xl font-semibold mb-6 text-primary">10. Contact Us</h2>
+                    <p class="text-base-content/80 leading-relaxed">
+                        For questions about this Privacy Policy:<br>
+                        <strong>Email:</strong> finlite@redentor.dev
+                    </p>
+                </section>
+
+                <!-- Section 11 -->
+                <section class="card bg-base-200/30 backdrop-blur border border-base-300/20 p-8 card-hover">
+                    <h2 class="text-2xl font-semibold mb-6 text-primary">11. Jurisdiction-Specific Notices</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">11.1 Philippines (Data Privacy Act of 2012)</h3>
+                            <p class="text-base-content/70">
+                                FinLite complies with Republic Act No. 10173. You have rights under this law including the right to information, correction, and blocking of data.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">11.2 European Union (GDPR)</h3>
+                            <p class="text-base-content/70">
+                                If you are in the EU, GDPR applies. You have additional data subject rights and the right to lodge a complaint with your local data protection authority.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-base-content/90">11.3 California (CCPA)</h3>
+                            <p class="text-base-content/70">
+                                California residents have additional rights to know, delete, and opt-out under the California Consumer Privacy Act.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-100 border-t border-base-300/50 mt-20">
+        <nav>
+            <div class="grid grid-flow-col gap-4">
+                <a href="/terms.html" class="link link-hover text-base-content/70 hover:text-primary transition-colors">Terms</a>
+                <span class="text-base-content/40">•</span>
+                <a href="/privacy.html" class="link link-hover text-base-content/70 hover:text-primary transition-colors">Privacy</a>
+            </div>
+        </nav>
+        <aside>
+            <p class="font-medium text-base-content/90">Made with ❤️ by FinLite</p>
+            <p class="text-base-content/60">finlite@redentor.dev</p>
+            <p class="text-base-content/50 text-sm">© 2025 FinLite. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'dark') {
+            themeToggle.checked = true;
+        }
+        
+        themeToggle.addEventListener('change', () => {
+            const theme = themeToggle.checked ? 'dark' : 'light';
+            html.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        });
+    </script>
+</body>
+</html>

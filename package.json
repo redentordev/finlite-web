@@ -1,0 +1,20 @@
+{
+  "name": "finlite-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "wrangler pages dev public --port 8787",
+    "deploy": "wrangler pages deploy public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hono": "^4.10.4"
+  },
+  "devDependencies": {
+    "wrangler": "^4.45.3"
+  },
+  "description": "FinLite - Smart Budget & Spending Tracker Website"
+}
